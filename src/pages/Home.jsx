@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-screen" id="home">
+      <div className="w-full h-fit relative" id="home">
         <div
           style={{
             background: `url(${heroSectionImages[0].url})`,
