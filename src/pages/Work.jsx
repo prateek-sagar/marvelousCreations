@@ -5,6 +5,7 @@ import work3 from "../assets/works/orderWork3.jpeg";
 import work4 from "../assets/works/orderWork4.jpeg";
 import work5 from "../assets/works/orderWork5.jpeg";
 import work6 from "../assets/works/SelfWork1.jpeg";
+import work7 from "../assets/works/SelfWork1.jpeg";
 import ImageShow from "./components/ImageShow";
 
 export default function Work() {
@@ -14,26 +15,30 @@ export default function Work() {
   const section_one = [
     {
       id: 1,
-      value: work1,
+      value: work7,
     },
     {
       id: 2,
-      value: work2,
+      value: work1,
     },
     {
       id: 3,
-      value: work3,
+      value: work2,
     },
     {
       id: 4,
-      value: work4,
+      value: work3,
     },
     {
       id: 5,
-      value: work5,
+      value: work4,
     },
     {
       id: 6,
+      value: work5,
+    },
+    {
+      id: 7,
       value: work6,
     },
   ];
