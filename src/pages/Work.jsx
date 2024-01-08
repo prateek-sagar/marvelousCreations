@@ -15,27 +15,27 @@ export default function Work() {
   const section_one = [
     {
       id: 1,
-      value: work7,
-    },
-    {
-      id: 2,
       value: work1,
     },
     {
-      id: 3,
+      id: 2,
       value: work2,
     },
     {
-      id: 4,
+      id: 3,
       value: work3,
     },
     {
+      id: 4,
+      value: work7,
+    },
+    {
       id: 5,
-      value: work4,
+      value: work5,
     },
     {
       id: 6,
-      value: work5,
+      value: work4,
     },
     {
       id: 7,
