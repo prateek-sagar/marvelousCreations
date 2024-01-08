@@ -5,7 +5,7 @@ import work3 from "../assets/works/orderWork3.jpeg";
 import work4 from "../assets/works/orderWork4.jpeg";
 import work5 from "../assets/works/orderWork5.jpeg";
 import work6 from "../assets/works/SelfWork1.jpeg";
-import work7 from "../assets/works/SelfWork1.jpeg";
+import work7 from "../assets/works/orderWork6.jpeg";
 import ImageShow from "./components/ImageShow";
 
 export default function Work() {
