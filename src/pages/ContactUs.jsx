@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import backgroundImg from "../assets/contactBackground.jpg";
 import { FaInstagram, FaFacebook, FaYoutube, FaBlog } from "react-icons/fa6";
 import logo from "../assets/Logo.jpeg";
 export default function ContactUs() {
+  const [formstate, setFormState] = useState({});
+
+  const changeHandler = (event) => {
+    setFormState({ ...formstate, [event.target.name]: event.target.value });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const config = {
+      SecureToken: "63490405-8f7f-4850-b5f0-bf39a88a49a6",
+      To: "prateeksagar@yopmail.com",
+      From: formstate.email,
+      Subject: "This is the subject",
+      Body: formstate.body,
+    };
+    if (window.Email) {
+      console.log(config);
+      window.Email.send(config).then((message) => alert(message));
+    }
+  };
   return (
     <div
       id="contactUs"
@@ -13,32 +32,43 @@ export default function ContactUs() {
         backgroundPosition: "center",
       }}
     >
-      <div class="absolute inset-0 bg-black bg-opacity-90" />
+      <div className="absolute inset-0 bg-black bg-opacity-90" />
       <div className="h-full mx-10 md:mx-[80px] py-4 xl:py-8 2xl:mx-[240px] z-[2]">
         <div className="w-full h-1/5 flex justify-center items-center text-white text-[48px] font-normal font-roboto lg:text-[64px]">
           Contact Us
         </div>
         <div className="flex flex-col md:flex-row h-4/5 justify-between w-full items-start p-1">
           <div className="w-full h-full md:w-2/5 p-1">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input
+                type="text"
+                name="name"
+                value={formstate.name || ""}
                 className="w-1/2 h-2/5 m-1 rounded-md p-2"
-                placeholder="name"
+                placeholder="Full Name"
+                onChange={changeHandler}
               />
               <input
+                type="email"
+                name="email"
+                value={formstate.email || ""}
                 className="w-1/2 h-2/5 m-1 rounded-md p-2"
                 placeholder="e-mail"
+                onChange={changeHandler}
               />
               <input
+                type="text"
+                name="body"
+                value={formstate.body || ""}
+                onChange={changeHandler}
                 className="w-full h-[163px] m-1 rounded-md p-2"
                 placeholder="message"
               />
-              <button
-                id="submit"
+              <input
+                type="submit"
+                value="send"
                 className="m-1 rounded-lg px-2 py-1 bg-gray-500 "
-              >
-                Submit
-              </button>
+              />
             </form>
           </div>
           <div className="w-full h-full md:w-3/5 flex px-2">
@@ -47,10 +77,10 @@ export default function ContactUs() {
                 <img src={logo} className="max-w-48 w-full rounded-full" />
               </div>
               <div className="text-white text-base font-normal font-roboto">
-                Contact Number
+                8130499979
               </div>
               <div className="text-white text-base font-normal font-roboto">
-                Email-Id
+                marvelouscreations93@gmail.com
               </div>
             </div>
             <div className="w-1/2 h-full mx-2 flex flex-col justify-center items-center">
