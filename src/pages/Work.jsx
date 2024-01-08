@@ -40,11 +40,11 @@ export default function Work() {
     },
     {
       id: 7,
-      value: work6,
+      value: work8,
     },
     {
       id: 8,
-      value: work8,
+      value: work6,
     },
   ];
   const openImage = (event) => {
