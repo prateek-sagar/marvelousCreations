@@ -36,7 +36,7 @@ export default function ContactUs() {
               method="POST"
             >
               <input
-                name="_next"
+                name="_redirect"
                 type="hidden"
                 id="name"
                 value={alert_window}
