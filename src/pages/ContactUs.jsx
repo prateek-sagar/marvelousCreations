@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import backgroundImg from "../assets/contactBackground.jpg";
 import { FaInstagram, FaFacebook, FaYoutube, FaBlog } from "react-icons/fa6";
 import logo from "../assets/Logo.jpeg";
+const alert_window = () => {
+  return (
+    <div
+      class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4"
+      role="alert"
+    >
+      <p class="font-bold">Success</p>
+      <p>We will connect you soon.</p>
+    </div>
+  );
+};
 export default function ContactUs() {
   return (
     <div
@@ -25,10 +36,10 @@ export default function ContactUs() {
               method="POST"
             >
               <input
-                name="_redirect"
+                name="_next"
                 type="hidden"
                 id="name"
-                value="https://marvelouscreations.netlify.app/"
+                value={alert_window}
               ></input>
               <input
                 type="text"
