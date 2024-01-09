@@ -25,6 +25,12 @@ export default function ContactUs() {
               method="POST"
             >
               <input
+                name="_redirect"
+                type="hidden"
+                id="name"
+                value="https://marvelouscreations.netlify.app/"
+              ></input>
+              <input
                 type="text"
                 name="name"
                 className="w-1/2 h-2/5 m-1 rounded-md p-2"
@@ -42,6 +48,8 @@ export default function ContactUs() {
                 className="w-full h-[163px] m-1 rounded-md p-2"
                 placeholder="message"
               />
+              <input name="_formsubmit_id" type="text" className="hidden" />
+
               <input
                 type="submit"
                 value="Submit"
