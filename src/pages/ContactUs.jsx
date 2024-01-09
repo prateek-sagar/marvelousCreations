@@ -3,25 +3,6 @@ import backgroundImg from "../assets/contactBackground.jpg";
 import { FaInstagram, FaFacebook, FaYoutube, FaBlog } from "react-icons/fa6";
 import logo from "../assets/Logo.jpeg";
 export default function ContactUs() {
-  const [formstate, setFormState] = useState({});
-
-  const changeHandler = (event) => {
-    setFormState({ ...formstate, [event.target.name]: event.target.value });
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const config = {
-      SecureToken: "63490405-8f7f-4850-b5f0-bf39a88a49a6",
-      To: "prateeksagar@yopmail.com",
-      From: formstate.email,
-      Subject: "This is the subject",
-      Body: formstate.body,
-    };
-    if (window.Email) {
-      console.log(config);
-      window.Email.send(config).then((message) => alert(message));
-    }
-  };
   return (
     <div
       id="contactUs"
@@ -39,34 +20,31 @@ export default function ContactUs() {
         </div>
         <div className="flex flex-col md:flex-row h-4/5 justify-between w-full items-start p-1">
           <div className="w-full h-full md:w-2/5 p-1">
-            <form onSubmit={handleSubmit}>
+            <form
+              action="https://formsubmit.io/send/prateeksagar806@gmail.com"
+              method="POST"
+            >
               <input
                 type="text"
                 name="name"
-                value={formstate.name || ""}
                 className="w-1/2 h-2/5 m-1 rounded-md p-2"
                 placeholder="Full Name"
-                onChange={changeHandler}
               />
               <input
                 type="email"
                 name="email"
-                value={formstate.email || ""}
                 className="w-1/2 h-2/5 m-1 rounded-md p-2"
                 placeholder="e-mail"
-                onChange={changeHandler}
               />
-              <input
+              <textarea
                 type="text"
-                name="body"
-                value={formstate.body || ""}
-                onChange={changeHandler}
+                name="comment&nbsp;message"
                 className="w-full h-[163px] m-1 rounded-md p-2"
                 placeholder="message"
               />
               <input
                 type="submit"
-                value="send"
+                value="Submit"
                 className="m-1 rounded-lg px-2 py-1 bg-gray-500 "
               />
             </form>
