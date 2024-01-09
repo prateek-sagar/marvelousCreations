@@ -32,7 +32,7 @@ export default function ContactUs() {
         <div className="flex flex-col md:flex-row h-4/5 justify-between w-full items-start p-1">
           <div className="w-full h-full md:w-2/5 p-1">
             <form
-              action="https://formsubmit.io/send/prateeksagar806@gmail.com"
+              action="https://formsubmit.io/send/marvelouscreations93@gmail.com"
               method="POST"
             >
               <input
